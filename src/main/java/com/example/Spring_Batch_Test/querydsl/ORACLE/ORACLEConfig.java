@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = "com.example.Spring_Batch_Test.querydsl.ORACLE",
+        basePackages = "com.example.Spring_Batch_Test.querydsl.ORACLE",//레파지토리 패키지 경로
         entityManagerFactoryRef = "ORACLEEntityManager",
         transactionManagerRef = "ORACLETransactionManager")
 public class ORACLEConfig {
@@ -32,7 +32,7 @@ public class ORACLEConfig {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 
         em.setDataSource(ORACLEDataSource());
-        em.setPackagesToScan("com.example.Spring_Batch_Test.querydsl.ORACLE");
+        em.setPackagesToScan("com.example.Spring_Batch_Test.querydsl.ORACLE");//엔티티 패키지 경로
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaPropertyMap(new HashMap<String, Object>() {{
             put("hibernate.dialect", "org.hibernate.dialect.Oracle12cDialect");

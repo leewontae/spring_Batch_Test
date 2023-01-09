@@ -28,7 +28,7 @@ public class PGISConfig {
 
         return DataSourceBuilder.create().build();
     }
-  
+
     @Bean
     @Primary
     public LocalContainerEntityManagerFactoryBean PGISEntityManager() {
