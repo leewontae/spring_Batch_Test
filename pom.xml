@@ -70,6 +70,7 @@
             <artifactId>querydsl-jpa</artifactId>
             <version>5.0.0</version>
         </dependency>
+        <!--TEST할 떄 필요 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -81,11 +82,11 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+      <!-- 스프링 배치 -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.1</version>
-            <scope>test</scope>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>4.3.6</version>
         </dependency>
     </dependencies>
 
@@ -105,5 +106,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

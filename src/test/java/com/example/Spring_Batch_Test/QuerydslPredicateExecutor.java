@@ -1,6 +1,7 @@
 package com.example.Spring_Batch_Test;
 
-
+import com.example.Spring_Batch_Test.querydsl.ORACLE.O_DEPT;
+import com.example.Spring_Batch_Test.querydsl.ORACLE.O_Repository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,16 +14,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @EnableTransactionManagement
-public class OracleTests {
-
+public class QuerydslPredicateExecutor {
 
     @Autowired
     com.example.Spring_Batch_Test.querydsl.ORACLE.O_Repository O_Repository;
     @Test
-    public void vdsCountTest() {
+    public void querydslPredicateExecute() {
 
-        log.info("ORCALE DEPT : {}", O_Repository.count());
-//        log.info("ORCALE DEPT : {}", O_Repository.findAll());
-
+        Iterable<O_DEPT> result = O_Repository.findAll();
+        for (O_DEPT m : result) System.out.println("m = " + m);
     }
 }
