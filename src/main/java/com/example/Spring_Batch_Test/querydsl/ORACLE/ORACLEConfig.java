@@ -34,6 +34,7 @@ public class ORACLEConfig {
         em.setDataSource(ORACLEDataSource());
         em.setPackagesToScan("com.example.Spring_Batch_Test.querydsl.ORACLE");//엔티티 패키지 경로
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        em.setPersistenceUnitName("O_EntityManager");
         em.setJpaPropertyMap(new HashMap<String, Object>() {{
             put("hibernate.dialect", "org.hibernate.dialect.Oracle12cDialect");
         }});

@@ -22,7 +22,7 @@ import java.util.HashMap;
 public class PGISConfig {
 
     @Bean
-    @Primary
+    @Primary //Master가 되는 Datasource를 지정해야 한다.
     @ConfigurationProperties(prefix = "spring.pgis-datasource")
     public DataSource PGISDataSource() {
 
